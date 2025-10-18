@@ -1,0 +1,167 @@
+@import "tailwindcss";
+
+/* CSS Custom Properties for 5-Color Palette */
+:root {
+  --rich-black: #0d1821;
+  --anti-flash-white: #eff1f3;
+  --hookers-green: #4e6e5d;
+  --lion: #ad8a64;
+  --chestnut: #a44a3f;
+}
+
+/* Animation classes */
+.animate-fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Utility classes for the 5-color palette */
+.bg-rich-black {
+  background-color: var(--rich-black);
+}
+.bg-anti-flash-white {
+  background-color: var(--anti-flash-white);
+}
+.bg-hookers-green {
+  background-color: var(--hookers-green);
+}
+.bg-lion {
+  background-color: var(--lion);
+}
+.bg-chestnut {
+  background-color: var(--chestnut);
+}
+
+.text-rich-black {
+  color: var(--rich-black);
+}
+.text-anti-flash-white {
+  color: var(--anti-flash-white);
+}
+.text-hookers-green {
+  color: var(--hookers-green);
+}
+.text-lion {
+  color: var(--lion);
+}
+.text-chestnut {
+  color: var(--chestnut);
+}
+
+.border-rich-black {
+  border-color: var(--rich-black);
+}
+.border-anti-flash-white {
+  border-color: var(--anti-flash-white);
+}
+.border-hookers-green {
+  border-color: var(--hookers-green);
+}
+.border-lion {
+  border-color: var(--lion);
+}
+.border-chestnut {
+  border-color: var(--chestnut);
+}
+
+/* Hover states for the 5-color palette */
+.hover\:bg-rich-black:hover {
+  background-color: var(--rich-black);
+}
+.hover\:bg-anti-flash-white:hover {
+  background-color: var(--anti-flash-white);
+}
+.hover\:bg-hookers-green:hover {
+  background-color: var(--hookers-green);
+}
+.hover\:bg-lion:hover {
+  background-color: var(--lion);
+}
+.hover\:bg-chestnut:hover {
+  background-color: var(--chestnut);
+}
+
+.hover\:text-rich-black:hover {
+  color: var(--rich-black);
+}
+.hover\:text-anti-flash-white:hover {
+  color: var(--anti-flash-white);
+}
+.hover\:text-hookers-green:hover {
+  color: var(--hookers-green);
+}
+.hover\:text-lion:hover {
+  color: var(--lion);
+}
+.hover\:text-chestnut:hover {
+  color: var(--chestnut);
+}
+
+/* Additional utility classes */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.shadow-soft {
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.shadow-medium {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-strong {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
