@@ -15,7 +15,6 @@ const Navbar = () => {
 
   const navigation = [
     { title: "Products", path: "/products", requiresAuth: true },
-    { title: "Add Product", path: "/products/create", requiresAuth: true },
   ];
 
   const filteredNavigation = navigation.filter(

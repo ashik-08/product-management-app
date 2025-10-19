@@ -6,6 +6,7 @@ import {
 import { useMemo, useState } from "react";
 import Filter from "../Actions/Filter";
 import Search from "../Actions/Search";
+import CreateProductForm from "../Forms/CreateProductForm";
 import EmptyState from "../States/EmptyState";
 import ErrorState from "../States/ErrorState";
 import NoResults from "../States/NoResults";
@@ -15,6 +16,7 @@ const ProductBoard = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategoryId, setSelectedCategoryId] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [showCreateForm, setShowCreateForm] = useState(false);
   const itemsPerPage = 12;
 
   // Calculate offset for pagination
@@ -111,12 +113,14 @@ const ProductBoard = () => {
   return (
     <div className="pt-16">
       <div className="relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl text-center">
-          Product Catalog
-        </h1>
-        <p className="mt-4 text-xl text-gray-500 text-center">
-          Discover and manage your product inventory with ease.
-        </p>
+        <div className="text-center">
+          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+            Product Catalog
+          </h1>
+          <p className="mt-4 text-xl text-gray-500">
+            Discover and manage your product inventory with ease.
+          </p>
+        </div>
       </div>
       <div className="mt-10">
         <div className="flex justify-between relative mx-auto max-w-7xl px-4 sm:static sm:px-6 lg:px-8">
@@ -128,9 +132,15 @@ const ProductBoard = () => {
               onCategoryChange={setSelectedCategoryId}
             />
           </div>
-          {/* <!-- Search --> */}
+          {/* <!-- Search and Add Product Button --> */}
           <div className="flex gap-2 items-center">
             <Search searchTerm={searchTerm} onSearchChange={setSearchTerm} />
+            <button
+              onClick={() => setShowCreateForm(true)}
+              className="px-3 py-2.5 bg-hookers-green text-white rounded-lg hover:bg-hookers-green/90 transition-colors duration-300 font-medium whitespace-nowrap cursor-pointer"
+            >
+              Add Product
+            </button>
           </div>
         </div>
       </div>
@@ -141,6 +151,16 @@ const ProductBoard = () => {
           </div>
         </div>
       </div>
+
+      {/* Create Product Modal */}
+      <CreateProductForm
+        isOpen={showCreateForm}
+        onClose={() => setShowCreateForm(false)}
+        onSuccess={() => {
+          // Optionally refresh the products list or show success message
+          console.log("Product created successfully!");
+        }}
+      />
     </div>
   );
 };
