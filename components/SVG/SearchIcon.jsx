@@ -1,7 +1,7 @@
 const SearchIcon = () => {
   return (
     <svg
-      className="pointer-events-none absolute inset-y-0 left-0 h-full w-5 text-gray-400"
+      className="pointer-events-none absolute inset-y-0 left-2 h-full w-5 text-gray-400"
       viewBox="0 0 20 20"
       fill="currentColor"
       aria-hidden="true"

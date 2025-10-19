@@ -62,15 +62,15 @@ export function LoginForm() {
   };
 
   return (
-    <Card className="w-full max-w-md mx-auto animate-scale-in shadow-lg border-hookersGreen/10">
+    <Card className="w-full max-w-md mx-auto animate-scale-in shadow-lg border-hookers-green/20">
       <CardHeader className="space-y-3 text-center pb-6">
-        <div className="mx-auto w-12 h-12 bg-gradient-to-br from-hookersGreen to-lion rounded-full flex items-center justify-center">
+        <div className="mx-auto w-12 h-12 bg-gradient-to-br to-lion rounded-full flex items-center justify-center">
           <Mail className="w-6 h-6 text-hookers-green" />
         </div>
-        <CardTitle className="text-2xl font-bold text-richBlack">
+        <CardTitle className="text-2xl font-bold text-rich-black">
           Sign In
         </CardTitle>
-        <CardDescription className="text-hookersGreen/70">
+        <CardDescription className="text-hookers-green">
           Enter your email address to access your account
         </CardDescription>
       </CardHeader>
@@ -120,7 +120,7 @@ export function LoginForm() {
 
         {/* Trust Indicators */}
         <div className="space-y-3 pt-4 border-t border-hookers-green/10">
-          <div className="flex items-center justify-center space-x-4 text-xs text-hookersGreen/60">
+          <div className="flex items-center justify-center space-x-4 text-xs">
             <span className="flex items-center space-x-1">
               <div className="w-2 h-2 bg-hookers-green rounded-full"></div>
               <span>Secure Login</span>
@@ -132,7 +132,7 @@ export function LoginForm() {
           </div>
 
           <div className="text-center">
-            <p className="text-sm text-hookers-green/60 leading-relaxed">
+            <p className="text-sm text-rich-black/70 leading-relaxed">
               By signing in, you agree to our secure authentication process.
               Your session will be protected with industry-standard encryption.
             </p>

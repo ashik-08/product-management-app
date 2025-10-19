@@ -4,15 +4,15 @@ const Input = ({ label, error, className, required, ...props }) => {
   return (
     <div className="w-full">
       {label && (
-        <label className="block text-sm font-semibold text-richBlack mb-3">
+        <label className="block text-sm font-semibold text-rich-black mb-3">
           {label}
           {required && <span className="text-chestnut ml-1">*</span>}
         </label>
       )}
       <input
         className={cn(
-          "block w-full px-4 py-3 border border-hookersGreen/20 rounded-2xl shadow-soft placeholder-hookersGreen/40",
-          "focus:outline-none focus:ring-2 focus:ring-hookersGreen/40 focus:border-hookersGreen",
+          "block w-full px-4 py-3 border border-hookers-green/20 rounded-lg shadow-soft placeholder-hookers-green/70",
+          "focus:outline-none focus:ring-2 focus:ring-hookers-green/40 focus:border-hookers-green",
           "transition-all duration-300 bg-white/80 backdrop-blur-sm",
           "hover:border-hookersGreen/30 hover:shadow-medium",
           error &&

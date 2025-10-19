@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
         <img
           src={image}
           alt={id}
-          className="h-full w-full object-contain lg:h-full lg:w-full p-4 border rounded-lg"
+          className="h-full w-full object-contain lg:h-full lg:w-full p-4 border border-hookers-green/40 rounded-lg"
         />
       </div>
       <div className="mt-4 px-3 pb-4 flex-grow flex flex-col">
@@ -28,7 +28,7 @@ const ProductCard = ({ product }) => {
       <div className="mx-3 mb-3">
         <button
           onClick={handleViewDetails}
-          className="w-full group cursor-pointer rounded-md text-[0.8125rem] font-medium leading-5 text-slate-700 ring-1 ring-slate-700/10 hover:bg-slate-900 hover:text-white transition-all duration-300 items-center text-center"
+          className="w-full group cursor-pointer rounded-md text-[0.8125rem] font-medium leading-5 text-slate-700 ring-1 ring-slate-700/10 hover:bg-hookers-green hover:text-white transition-all duration-300 items-center text-center"
         >
           <div className="flex px-3 py-2 justify-center items-center">
             View Details

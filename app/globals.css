@@ -9,6 +9,14 @@
   --chestnut: #a44a3f;
 }
 
+@theme {
+  --color-rich-black: #0d1821;
+  --color-anti-flash-white: #eff1f3;
+  --color-hookers-green: #4e6e5d;
+  --color-lion: #ad8a64;
+  --color-chestnut: #a44a3f;
+}
+
 /* Animation classes */
 .animate-fade-in {
   animation: fadeIn 0.2s ease-in-out;
